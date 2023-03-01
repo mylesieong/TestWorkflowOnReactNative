@@ -19,4 +19,7 @@ jobs:
       - run: cd ReactNativeBare/android && npm install
       - run: cd ReactNativeBare/android && chmod +x ./gradlew
       - run: cd ReactNativeBare/android && ./gradlew assembleDebug --no-daemon
-    
+      - uses: actions/upload-artifact@v1
+        with:
+          name: debug.apk
+          path: ReactNativeBare/android/app/build/outputs/apk/debug/app-debug.apk
