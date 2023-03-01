@@ -16,5 +16,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd ReactNativeBare/ && npm ci
+      - run: cd ReactNativeBare/android && chmod +x ./gradlew
+      - run: cd ReactNativeBare/android && ./gradlew assembleRelease --no-daemon
     
